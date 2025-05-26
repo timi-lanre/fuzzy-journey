@@ -49,52 +49,36 @@ export function AdvisorTableRow({ advisor }: AdvisorTableRowProps) {
   return (
     <>
       <TableRow className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors group">
-        <TableCell className="px-3 py-3 font-medium text-slate-900 w-[12%]">
-          <div className="break-words" title={advisor.first_name || ''}>
-            {advisor.first_name || <span className="text-slate-400">-</span>}
-          </div>
+        <TableCell className="px-2 py-2 font-medium text-slate-900 w-[10%]">
+          {advisor.first_name || <span className="text-slate-400">-</span>}
         </TableCell>
-        <TableCell className="px-3 py-3 font-medium text-slate-900 w-[12%]">
-          <div className="break-words" title={advisor.last_name || ''}>
-            {advisor.last_name || <span className="text-slate-400">-</span>}
-          </div>
+        <TableCell className="px-2 py-2 font-medium text-slate-900 w-[10%]">
+          {advisor.last_name || <span className="text-slate-400">-</span>}
         </TableCell>
-        <TableCell className="px-3 py-3 text-slate-700 w-[18%]">
-          <div className="break-words" title={advisor.title || ''}>
-            {advisor.title || <span className="text-slate-400">-</span>}
-          </div>
+        <TableCell className="px-2 py-2 text-slate-700 w-[15%]">
+          {advisor.title || <span className="text-slate-400">-</span>}
         </TableCell>
-        <TableCell className="px-3 py-3 text-slate-700 w-[15%]">
-          <div className="break-words" title={advisor.firm || ''}>
-            {advisor.firm || <span className="text-slate-400">-</span>}
-          </div>
+        <TableCell className="px-2 py-2 text-slate-700 w-[15%]">
+          {advisor.firm || <span className="text-slate-400">-</span>}
         </TableCell>
-        <TableCell className="px-3 py-3 text-slate-700 w-[15%]">
-          <div className="break-words" title={advisor.branch || ''}>
-            {advisor.branch || <span className="text-slate-400">-</span>}
-          </div>
+        <TableCell className="px-2 py-2 text-slate-700 w-[15%]">
+          {advisor.branch || <span className="text-slate-400">-</span>}
         </TableCell>
-        <TableCell className="px-3 py-3 text-slate-700 w-[12%]">
-          <div className="break-words" title={advisor.team_name || ''}>
-            {advisor.team_name || <span className="text-slate-400">-</span>}
-          </div>
+        <TableCell className="px-2 py-2 text-slate-700 w-[15%]">
+          {advisor.team_name || <span className="text-slate-400">-</span>}
         </TableCell>
-        <TableCell className="px-3 py-3 text-slate-700 w-[8%]">
-          <div className="break-words" title={advisor.city || ''}>
-            {advisor.city || <span className="text-slate-400">-</span>}
-          </div>
+        <TableCell className="px-2 py-2 text-slate-700 w-[10%]">
+          {advisor.city || <span className="text-slate-400">-</span>}
         </TableCell>
-        <TableCell className="px-3 py-3 text-slate-700 w-[8%]">
-          <div className="break-words" title={advisor.province || ''}>
-            {advisor.province || <span className="text-slate-400">-</span>}
-          </div>
+        <TableCell className="px-2 py-2 text-slate-700 w-[5%]">
+          {advisor.province || <span className="text-slate-400">-</span>}
         </TableCell>
-        <TableCell className="px-3 py-3 w-[10%]">
-          <div className="flex flex-wrap items-center justify-center gap-1">
+        <TableCell className="px-2 py-2 w-[5%]">
+          <div className="flex flex-wrap items-center justify-center gap-0.5">
             <Button
               variant="ghost"
               size="icon"
-              className="h-7 w-7 text-slate-500 hover:text-purple-600 hover:bg-purple-50 transition-colors"
+              className="h-6 w-6 text-slate-500 hover:text-purple-600 hover:bg-purple-50"
               onClick={() => setShowDetailPopup(true)}
               title="View Details"
             >
@@ -103,7 +87,7 @@ export function AdvisorTableRow({ advisor }: AdvisorTableRowProps) {
             <Button
               variant="ghost"
               size="icon"
-              className="h-7 w-7 text-slate-500 hover:text-red-600 hover:bg-red-50 transition-colors"
+              className="h-6 w-6 text-slate-500 hover:text-red-600 hover:bg-red-50"
               onClick={() => setShowFavoritesPopup(true)}
               title="Add to Favorites"
             >
@@ -113,7 +97,7 @@ export function AdvisorTableRow({ advisor }: AdvisorTableRowProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-7 w-7 text-slate-500 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                className="h-6 w-6 text-slate-500 hover:text-blue-600 hover:bg-blue-50"
                 onClick={handleEmailClick}
                 title="Send Email"
               >
@@ -124,7 +108,7 @@ export function AdvisorTableRow({ advisor }: AdvisorTableRowProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-7 w-7 text-slate-500 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                className="h-6 w-6 text-slate-500 hover:text-blue-600 hover:bg-blue-50"
                 onClick={handleLinkedInClick}
                 title="View LinkedIn"
               >
@@ -135,7 +119,7 @@ export function AdvisorTableRow({ advisor }: AdvisorTableRowProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-7 w-7 text-slate-500 hover:text-green-600 hover:bg-green-50 transition-colors"
+                className="h-6 w-6 text-slate-500 hover:text-green-600 hover:bg-green-50"
                 onClick={handleWebsiteClick}
                 title="Visit Website"
               >
