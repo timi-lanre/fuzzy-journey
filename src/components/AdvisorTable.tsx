@@ -1,4 +1,3 @@
-
 import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { AdvisorTableHeader } from './AdvisorTableHeader';
@@ -75,20 +74,15 @@ export function AdvisorTable({
   return (
     <div className="w-full bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
       <div className="relative">
-        {/* Sticky Header */}
-        <div className="sticky top-0 z-30 bg-white border-b-2 border-slate-200">
-          <Table>
+        {/* Scrollable Content with sticky header inside */}
+        <ScrollArea className="h-[640px] w-full" ref={scrollAreaRef}>
+          <Table className="min-w-[1400px]">
             <AdvisorTableHeader 
               onSort={onSort} 
               sortField={sortField}
               sortDirection={sortDirection}
+              isSticky={true}
             />
-          </Table>
-        </div>
-        
-        {/* Scrollable Content */}
-        <ScrollArea className="h-[640px] w-full" ref={scrollAreaRef}>
-          <Table>
             <TableBody>
               {advisors?.map((advisor) => (
                 <AdvisorTableRow key={advisor.id} advisor={advisor} />
