@@ -142,9 +142,6 @@ export function AdvisorTableRow({ advisor }: AdvisorTableRowProps) {
                 <Globe className="h-3.5 w-3.5" />
               </Button>
             )}
-            {!advisor.email && !advisor.linkedin_url && !advisor.website_url && showDetailPopup === false && (
-              <span className="text-slate-300 text-xs italic">Info only</span>
-            )}
           </div>
         </TableCell>
       </TableRow>
