@@ -75,8 +75,8 @@ export function AdvisorTable({
     <div className="w-full bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
       <div className="relative">
         {/* Scrollable Content with sticky header inside */}
-        <ScrollArea className="h-[640px] w-full" ref={scrollAreaRef}>
-          <Table className="min-w-[1400px]">
+        <ScrollArea className="h-[700px] w-full" ref={scrollAreaRef}>
+          <Table className="w-full table-fixed">
             <AdvisorTableHeader 
               onSort={onSort} 
               sortField={sortField}
