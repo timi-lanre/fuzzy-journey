@@ -48,7 +48,6 @@ export function AdvisorTable({
 }: AdvisorTableProps) {
   const scrollAreaRef = useRef<HTMLDivElement>(null);
 
-  // Handle scroll for infinite loading
   const handleScroll = useCallback(() => {
     const scrollContainer = scrollAreaRef.current?.querySelector('[data-radix-scroll-area-viewport]');
     if (!scrollContainer) return;
@@ -56,13 +55,11 @@ export function AdvisorTable({
     const { scrollTop, scrollHeight, clientHeight } = scrollContainer;
     const scrollPercentage = (scrollTop + clientHeight) / scrollHeight;
     
-    // Trigger when 90% scrolled
     if (scrollPercentage > 0.9 && hasNextPage && !isFetchingNextPage) {
       fetchNextPage();
     }
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
-  // Set up scroll listener
   useEffect(() => {
     const scrollContainer = scrollAreaRef.current?.querySelector('[data-radix-scroll-area-viewport]');
     if (!scrollContainer) return;
@@ -74,15 +71,16 @@ export function AdvisorTable({
   return (
     <div className="w-full bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
       <div className="relative">
-        {/* Scrollable Content with sticky header inside */}
-        <ScrollArea className="h-[700px] w-full" ref={scrollAreaRef}>
-          <Table className="w-full table-fixed">
-            <AdvisorTableHeader 
-              onSort={onSort} 
-              sortField={sortField}
-              sortDirection={sortDirection}
-              isSticky={true}
-            />
+        <div className="sticky top-0 z-30 bg-white">
+          <AdvisorTableHeader 
+            onSort={onSort} 
+            sortField={sortField}
+            sortDirection={sortDirection}
+          />
+        </div>
+        
+        <ScrollArea className="h-[640px] w-full" ref={scrollAreaRef}>
+          <Table>
             <TableBody>
               {advisors?.map((advisor) => (
                 <AdvisorTableRow key={advisor.id} advisor={advisor} />
@@ -112,7 +110,6 @@ export function AdvisorTable({
         </ScrollArea>
       </div>
       
-      {/* Modern row count display */}
       <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
         <div className="text-sm text-slate-600">
           Showing <span className="font-semibold text-slate-900">{displayedCount.toLocaleString()}</span> of{' '}
