@@ -1,4 +1,3 @@
-
 import { TableRow, TableCell } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
 import { Mail, Linkedin, Globe, Info, Heart } from 'lucide-react';
@@ -50,40 +49,48 @@ export function AdvisorTableRow({ advisor }: AdvisorTableRowProps) {
   return (
     <>
       <TableRow className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors group">
-        <TableCell className="px-3 py-2 font-medium text-slate-900" style={{ width: '120px' }}>
+        <TableCell className="px-4 py-3 font-medium text-slate-900" style={{ width: '160px', minWidth: '160px' }}>
           <div className="truncate" title={advisor.first_name || ''}>
             {advisor.first_name || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-3 py-2 font-medium text-slate-900" style={{ width: '120px' }}>
+        <TableCell className="px-4 py-3 font-medium text-slate-900" style={{ width: '160px', minWidth: '160px' }}>
           <div className="truncate" title={advisor.last_name || ''}>
             {advisor.last_name || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-3 py-2 text-slate-700">
-          {advisor.title || <span className="text-slate-400">-</span>}
+        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '220px', minWidth: '220px' }}>
+          <div className="truncate" title={advisor.title || ''}>
+            {advisor.title || <span className="text-slate-400">-</span>}
+          </div>
         </TableCell>
-        <TableCell className="px-3 py-2 text-slate-700">
-          {advisor.firm || <span className="text-slate-400">-</span>}
+        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '200px', minWidth: '200px' }}>
+          <div className="truncate" title={advisor.firm || ''}>
+            {advisor.firm || <span className="text-slate-400">-</span>}
+          </div>
         </TableCell>
-        <TableCell className="px-3 py-2 text-slate-700">
-          {advisor.branch || <span className="text-slate-400">-</span>}
+        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '180px', minWidth: '180px' }}>
+          <div className="truncate" title={advisor.branch || ''}>
+            {advisor.branch || <span className="text-slate-400">-</span>}
+          </div>
         </TableCell>
-        <TableCell className="px-3 py-2 text-slate-700">
-          {advisor.team_name || <span className="text-slate-400">-</span>}
+        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '160px', minWidth: '160px' }}>
+          <div className="truncate" title={advisor.team_name || ''}>
+            {advisor.team_name || <span className="text-slate-400">-</span>}
+          </div>
         </TableCell>
-        <TableCell className="px-3 py-2 text-slate-700" style={{ width: '100px' }}>
+        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '140px', minWidth: '140px' }}>
           <div className="truncate" title={advisor.city || ''}>
             {advisor.city || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-3 py-2 text-slate-700" style={{ width: '80px' }}>
+        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '120px', minWidth: '120px' }}>
           <div className="truncate" title={advisor.province || ''}>
             {advisor.province || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-3 py-2" style={{ width: '140px' }}>
-          <div className="flex flex-wrap items-center justify-center gap-1 max-w-[120px]">
+        <TableCell className="px-4 py-3" style={{ width: '180px', minWidth: '180px' }}>
+          <div className="flex flex-wrap items-center justify-center gap-1">
             <Button
               variant="ghost"
               size="icon"
