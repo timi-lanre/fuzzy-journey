@@ -79,7 +79,7 @@ export function AdvisorTable({
           />
         </div>
         
-        <ScrollArea className="h-[640px] w-full" ref={scrollAreaRef}>
+        <ScrollArea className="h-[800px] w-full" ref={scrollAreaRef}>
           <Table>
             <TableBody>
               {advisors?.map((advisor) => (

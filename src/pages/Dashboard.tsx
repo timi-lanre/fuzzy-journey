@@ -328,7 +328,7 @@ export default function Dashboard() {
 
       {/* Main Content - Extra Wide container */}
       <main className="px-4 lg:px-8 pb-12 pt-6">
-        <div className="max-w-[1800px] mx-auto"> {/* Increased from 1600px to 1800px */}
+        <div className="max-w-[2000px] mx-auto">
           <div className="mb-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-2">Advisors Database</h2>
             <p className="text-slate-600 mb-4">Browse and sort through all advisors in your database</p>
