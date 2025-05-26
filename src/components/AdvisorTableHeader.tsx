@@ -20,18 +20,17 @@ export function AdvisorTableHeader({ onSort, sortField, sortDirection, isSticky 
     return sortDirection === 'asc' ? <ArrowUp className="h-4 w-4" /> : <ArrowDown className="h-4 w-4" />;
   };
 
-  const SortableHeader = ({ field, children, width }: { field: SortField; children: React.ReactNode; width: string }) => (
+  const SortableHeader = ({ field, children, widthClass }: { field: SortField; children: React.ReactNode; widthClass: string }) => (
     <TableHead 
-      className={`h-12 px-4 font-semibold text-slate-700 border-b-2 border-slate-200 ${isSticky ? 'sticky top-0 z-10 bg-white' : 'bg-white'}`} 
-      style={{ width, minWidth: width }}
+      className={`h-12 px-3 font-semibold text-slate-700 border-b-2 border-slate-200 ${widthClass} ${isSticky ? 'sticky top-0 z-10 bg-white' : 'bg-white'}`}
     >
       <Button
         variant="ghost"
         size="sm"
-        className="h-8 px-2 font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-2 whitespace-nowrap"
+        className="h-8 px-2 font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-2 w-full justify-start"
         onClick={() => onSort(field)}
       >
-        {children}
+        <span className="truncate">{children}</span>
         {getSortIcon(field)}
       </Button>
     </TableHead>
@@ -40,33 +39,32 @@ export function AdvisorTableHeader({ onSort, sortField, sortDirection, isSticky 
   return (
     <TableHeader>
       <TableRow className="hover:bg-transparent border-b-0">
-        <SortableHeader field="first_name" width="160px">
+        <SortableHeader field="first_name" widthClass="w-[12%]">
           First Name
         </SortableHeader>
-        <SortableHeader field="last_name" width="160px">
+        <SortableHeader field="last_name" widthClass="w-[12%]">
           Last Name
         </SortableHeader>
-        <SortableHeader field="title" width="220px">
+        <SortableHeader field="title" widthClass="w-[18%]">
           Title
         </SortableHeader>
-        <SortableHeader field="firm" width="200px">
+        <SortableHeader field="firm" widthClass="w-[15%]">
           Firm
         </SortableHeader>
-        <SortableHeader field="branch" width="180px">
+        <SortableHeader field="branch" widthClass="w-[15%]">
           Branch
         </SortableHeader>
-        <SortableHeader field="team_name" width="160px">
+        <SortableHeader field="team_name" widthClass="w-[12%]">
           Team
         </SortableHeader>
-        <SortableHeader field="city" width="140px">
+        <SortableHeader field="city" widthClass="w-[8%]">
           City
         </SortableHeader>
-        <SortableHeader field="province" width="120px">
+        <SortableHeader field="province" widthClass="w-[8%]">
           Province
         </SortableHeader>
         <TableHead 
-          className={`h-12 px-4 font-semibold text-slate-700 text-center border-b-2 border-slate-200 whitespace-nowrap ${isSticky ? 'sticky top-0 z-10 bg-white' : 'bg-white'}`} 
-          style={{ width: '180px', minWidth: '180px' }}
+          className={`h-12 px-3 font-semibold text-slate-700 text-center border-b-2 border-slate-200 w-[10%] ${isSticky ? 'sticky top-0 z-10 bg-white' : 'bg-white'}`}
         >
           Actions
         </TableHead>
