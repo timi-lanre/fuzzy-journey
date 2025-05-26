@@ -22,12 +22,12 @@ export function AdvisorTableHeader({ onSort, sortField, sortDirection, isSticky 
 
   const SortableHeader = ({ field, children, widthClass }: { field: SortField; children: React.ReactNode; widthClass: string }) => (
     <TableHead 
-      className={`h-12 px-3 font-semibold text-slate-700 border-b-2 border-slate-200 ${widthClass} ${isSticky ? 'sticky top-0 z-10 bg-white' : 'bg-white'}`}
+      className={`h-10 px-3 font-semibold text-slate-700 border-b-2 border-slate-200 ${widthClass} ${isSticky ? 'sticky top-0 z-10 bg-white' : 'bg-white'}`}
     >
       <Button
         variant="ghost"
         size="sm"
-        className="h-8 px-2 font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-2 w-full justify-start"
+        className="h-7 px-2 font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-100 flex items-center gap-1 w-full justify-start text-sm"
         onClick={() => onSort(field)}
       >
         <span className="truncate">{children}</span>
@@ -64,7 +64,7 @@ export function AdvisorTableHeader({ onSort, sortField, sortDirection, isSticky 
           Province
         </SortableHeader>
         <TableHead 
-          className={`h-12 px-3 font-semibold text-slate-700 text-center border-b-2 border-slate-200 w-[10%] ${isSticky ? 'sticky top-0 z-10 bg-white' : 'bg-white'}`}
+          className={`h-10 px-3 font-semibold text-slate-700 text-center border-b-2 border-slate-200 w-[10%] text-sm ${isSticky ? 'sticky top-0 z-10 bg-white' : 'bg-white'}`}
         >
           Actions
         </TableHead>
