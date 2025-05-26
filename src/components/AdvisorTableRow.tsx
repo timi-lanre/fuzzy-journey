@@ -49,47 +49,47 @@ export function AdvisorTableRow({ advisor }: AdvisorTableRowProps) {
   return (
     <>
       <TableRow className="border-b border-slate-100 hover:bg-slate-50/50 transition-colors group">
-        <TableCell className="px-4 py-3 font-medium text-slate-900" style={{ width: '160px', minWidth: '160px' }}>
-          <div className="truncate" title={advisor.first_name || ''}>
+        <TableCell className="px-3 py-3 font-medium text-slate-900 w-[12%]">
+          <div className="break-words" title={advisor.first_name || ''}>
             {advisor.first_name || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-4 py-3 font-medium text-slate-900" style={{ width: '160px', minWidth: '160px' }}>
-          <div className="truncate" title={advisor.last_name || ''}>
+        <TableCell className="px-3 py-3 font-medium text-slate-900 w-[12%]">
+          <div className="break-words" title={advisor.last_name || ''}>
             {advisor.last_name || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '220px', minWidth: '220px' }}>
-          <div className="truncate" title={advisor.title || ''}>
+        <TableCell className="px-3 py-3 text-slate-700 w-[18%]">
+          <div className="break-words" title={advisor.title || ''}>
             {advisor.title || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '200px', minWidth: '200px' }}>
-          <div className="truncate" title={advisor.firm || ''}>
+        <TableCell className="px-3 py-3 text-slate-700 w-[15%]">
+          <div className="break-words" title={advisor.firm || ''}>
             {advisor.firm || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '180px', minWidth: '180px' }}>
-          <div className="truncate" title={advisor.branch || ''}>
+        <TableCell className="px-3 py-3 text-slate-700 w-[15%]">
+          <div className="break-words" title={advisor.branch || ''}>
             {advisor.branch || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '160px', minWidth: '160px' }}>
-          <div className="truncate" title={advisor.team_name || ''}>
+        <TableCell className="px-3 py-3 text-slate-700 w-[12%]">
+          <div className="break-words" title={advisor.team_name || ''}>
             {advisor.team_name || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '140px', minWidth: '140px' }}>
-          <div className="truncate" title={advisor.city || ''}>
+        <TableCell className="px-3 py-3 text-slate-700 w-[8%]">
+          <div className="break-words" title={advisor.city || ''}>
             {advisor.city || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-4 py-3 text-slate-700" style={{ width: '120px', minWidth: '120px' }}>
-          <div className="truncate" title={advisor.province || ''}>
+        <TableCell className="px-3 py-3 text-slate-700 w-[8%]">
+          <div className="break-words" title={advisor.province || ''}>
             {advisor.province || <span className="text-slate-400">-</span>}
           </div>
         </TableCell>
-        <TableCell className="px-4 py-3" style={{ width: '180px', minWidth: '180px' }}>
+        <TableCell className="px-3 py-3 w-[10%]">
           <div className="flex flex-wrap items-center justify-center gap-1">
             <Button
               variant="ghost"
